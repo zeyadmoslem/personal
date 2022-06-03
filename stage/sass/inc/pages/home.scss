@@ -1,0 +1,155 @@
+.page-content {
+    .header {
+        height: 400px;
+        padding: 30px 0px;
+
+        @media (max-width: 1032px) {
+            height: 500px;
+
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            height: 100%;
+            z-index: 1;
+            background-position: center;
+            background-size: cover;
+            background-image: url('http://localhost/projects/zeyad_resume/dist/images/wallpaper.jpg');
+
+            @media (max-width: 1032px) {
+                justify-content: center;
+                align-items: baseline;
+                text-align: center;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: 0;
+                top: -30px;
+                width: 90%;
+                height: 30px;
+                margin-left: 5%;
+                box-shadow: 0 3px 8px 0 RGB(15 15 20 / 20%);
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                background: rgba(30, 30, 40, .88);
+
+                @media (max-width: 1032px) {
+                    display: none !important;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: -webkit-gradient(linear, left top, right top, color-stop(15%, rgba(45, 45, 58, .9)), color-stop(50%, rgba(45, 45, 58, .7)), to(rgba(43, 43, 53, .7)));
+                background-image: linear-gradient(90deg, rgba(45, 45, 58, .9) 15%, rgba(45, 45, 58, .7) 50%, rgba(43, 43, 53, .7) 100%);
+            }
+
+            .banner {
+                z-index: 2;
+                padding: 0px 50px;
+                position: relative;
+                width: 100%;
+
+                @media (max-width: 1032px) {
+                    padding: 60px 30px;
+                }
+
+                .banner-title {
+                    @media (max-width: 1032px) {
+                        font-size: 2.6rem;
+                    }
+
+                    @media (min-width: 1032px) and (max-width: 1400px) {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .cd-headline {
+                    letter-spacing: 1px;
+                    font-weight: 300;
+                    font-size: 15px;
+                    font-family: "Courier Prime", monospace;
+                    color: #fafafc;
+                    margin-left: 5px;
+                    display: block;
+
+                    @media (max-width: 1032px) {
+                        min-height: 85px !important;
+                    }
+
+                    i {
+                        color: $buttonBackground;
+                    }
+                }
+
+                a.c-btn {
+                    top: 10px;
+                    text-transform: uppercase;
+
+                    @media (max-width: 1032px) {}
+                }
+
+                img {
+                    width: 325px;
+                    position: absolute;
+                    right: 30px;
+                    bottom: -60px;
+
+                    @media (min-width: 1200px) and (max-width: 1400px) {
+                        width: 250px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .counter {
+        .counter-box {
+            margin: 5px 0px 30px 0px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+
+            .counter-number {
+                display: inline-block;
+                min-width: 50px;
+
+                span {
+                    color: #ffc107;
+                    font-weight: 600;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 22px;
+
+                }
+
+                i {
+                    color: #ffc107;
+                    font-weight: 600;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 22px;
+                    margin-left: 5px;
+                }
+            }
+
+            h6 {
+                display: inline-block;
+            }
+        }
+    }
+}

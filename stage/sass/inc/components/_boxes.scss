@@ -1,0 +1,75 @@
+.box {
+  position: relative;
+  height: 250px;
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  display: flex;
+  padding: 0px 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -6px 6px 10px #0c0c10,
+    -6px -6px 10px #14141a;
+    transition:0.3s;
+
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    height: 350px !important;
+  }
+
+
+  .box-content {
+    position: relative;
+    padding: 10px 10px 0px 10px;
+    margin-top: 0px;
+    overflow: hidden;
+
+    p {
+      margin: 10px 0px;
+      padding: 0;
+      font-size: 14px;
+
+    }
+
+    a {
+      color: $buttonBackground;
+      position: relative;
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      i {
+        transition: .4s ease-in-out;
+        margin-left: 3px;
+      }
+
+      &:hover {
+        i {
+          transform: translateX(3px);
+        }
+
+        &::after {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1px;
+        top: 9px;
+        width: 105%;
+        border-bottom: 1px solid;
+        margin-top: 10px;
+        opacity: 0;
+        color: $buttonBackground;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+      }
+
+    }
+  }
+}

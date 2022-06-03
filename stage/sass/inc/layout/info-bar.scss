@@ -1,0 +1,271 @@
+.app {
+    .info-bar {
+        position: fixed;
+        background: $secoundBackground;
+        width: 290px;
+        min-width: 290px;
+        height: calc(100vh - 30px);
+        z-index: 999;
+        box-shadow: 0 3px 8px 0 RGB(15 15 20 / 20%);
+        padding: 0 5px;
+        transition: .55s ease-in-out;
+
+        @media (max-width: 1032px) {
+            top: 0;
+            height: 100vh !important;
+            position: fixed;
+            left: -290px;
+            width: 290px;
+        }
+
+        &.art-active {
+            @media (max-width: 1032px) {
+                transition: .55s ease-in-out;
+                transform: translateX(290px);
+
+                .info-bar-btn {
+                    transform: translateX(0) !important;
+                }
+            }
+
+        }
+
+        .info-bar-frame {
+            padding: 0 15px;
+
+            .info-bar-header {
+                width: 100%;
+                height: 70px;
+                justify-content: flex-start;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 999999999999;
+                display: none;
+
+                @media (max-width: 1032px) {
+                    display: flex;
+
+                }
+
+                .info-bar-btn {
+                    margin-left: auto;
+                    pointer-events: all;
+                    font-size: 14px;
+                    padding: 30px;
+
+                    &.art-disabled {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    @media (max-width: 1032px) {
+                        -webkit-transform: translateX(70px);
+                        transform: translateX(70px);
+                        -webkit-transition: .4s ease-in-out;
+                        transition: .4s ease-in-out;
+
+                    }
+                }
+            }
+
+            .header {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 99999;
+                width: 100%;
+                padding: 30px;
+                height: 235px;
+                background: $thirdBackground;
+                text-align: center;
+                box-shadow: 0 1px 4px 0 RGB(15 15 20 / 10%);
+
+                .avatar {
+                    width: 90px;
+                    height: 90px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    position: relative;
+                    margin-bottom: 15px;
+
+                    .avatar-curtain {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        outline: inherit;
+                        -webkit-transition: .2s ease-in-out;
+                        transition: .2s ease-in-out;
+                        z-index: 0;
+
+                        img {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            z-index: 0;
+                        }
+
+                        i {
+                            background: linear-gradient(159deg, rgba(45, 45, 58, .88) 0%, rgba(43, 43, 53, .88) 100%);
+                            width: 30px;
+                            height: 30px;
+                            text-align: center;
+                            -ms-flex-item-align: center;
+                            align-self: center;
+                            font-weight: 700;
+                            font-size: 13px;
+                            line-height: 30px;
+                            color: $primaryColor;
+                            border-radius: 50%;
+                            opacity: 0;
+                            z-index: 1;
+                            -webkit-transition: .4s ease-in-out;
+                            transition: .4s ease-in-out;
+                        }
+                    }
+                }
+
+                .name a {
+                    color: $primaryColor;
+                    transition: .4s ease-in-out;
+                }
+            }
+
+            .scroll-frame {
+                padding: 240px 0 50px;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+                transform: translate3d(0, 0, 0);
+                width: 100%;
+                height: calc(100vh - 30px);
+
+                .table {
+                    color: $textColor;
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            list-style-type: none;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-pack: justify;
+                            -ms-flex-pack: justify;
+                            justify-content: space-between;
+                            margin-bottom: -13px;
+
+                        }
+                    }
+                }
+
+                .lang-skills {
+                    display: block;
+                    font-size: 0;
+                    flex-wrap: wrap;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                    margin-left: -10px;
+
+                    .lang-skills-item {
+                        text-align: center;
+                        width: 33%;
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: 13px;
+                        h6{
+                            margin-left: 7px;
+                        }
+
+                    }
+                }
+
+                .hard-skills {
+                    .skillbar {
+                        position: relative;
+                        display: block;
+                        margin-bottom: 30px;
+                        left: 0;
+                        width: 100%;
+                        background: #555;
+                        height: 4px;
+                        border-radius: 3px;
+                        transition: 0.4s linear;
+                        transition-property: width, background-color;
+                    }
+
+                    .skillbar-title {
+                        position: absolute;
+                        top: -22px;
+                        left: 0;
+                        font-weight: 400;
+                        color: #ffffff;
+
+                    }
+
+                    .skillbar-bar {
+                        height: 4px;
+                        width: 0px;
+                        background: $buttonBackground;
+                    }
+
+                    .skill-bar-percent {
+                        position: absolute;
+                        right: 0px;
+                        top: -20px;
+                        font-size: 12px;
+                        color: #ffffff;
+                        font-weight: 500;
+                    }
+
+                }
+
+            }
+
+            .ls-social {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                padding: 0 35px;
+                height: 50px;
+                background: $thirdBackground;
+                position: absolute;
+                bottom: 0;
+                box-shadow: 0 1px 4px 0 RGB(15 15 20 / 10%);
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                justify-content: center;
+
+                a {
+                    margin: 0 8px;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+
+            }
+        }
+    }
+}

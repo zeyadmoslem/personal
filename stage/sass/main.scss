@@ -1,0 +1,19 @@
+// Variables And Mixins And Classes
+@import 'inc/global/global.scss';
+
+// Utilities
+
+// Component
+@import 'inc/components/component.scss';
+
+// Layout
+@import 'inc/layout/app.scss';
+@import 'inc/layout/info-bar.scss';
+@import 'inc/layout/menu-bar.scss';
+@import 'inc/layout/content.scss';
+@import 'inc/pages/pages.scss';
+
+
+html, body{
+    scroll-behavior: auto !important;
+} 

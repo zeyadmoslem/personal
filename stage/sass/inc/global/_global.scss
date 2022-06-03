@@ -1,0 +1,55 @@
+@import './variable.scss';
+@import './classes.scss';
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #fafafc;
+    margin-bottom: 0;
+    font-family: "Poppins",sans-serif;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    font-size: 52px;
+    font-weight: 800;
+}
+h4{
+    font-size: 17px;
+    font-weight: 600;
+}
+h5 {
+    font-size: 14px;
+    font-weight: 600;
+}
+h6{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #8c8c8e;
+}
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    overflow-wrap: break-word;
+
+}
