@@ -7,9 +7,9 @@
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
-  box-shadow: -6px 6px 10px #0c0c10,
-    -6px -6px 10px #14141a;
-    transition:0.3s;
+  box-shadow: -6px 6px 10px #0c0c10c2, -6px -6px 10px #14141aab;
+  transition: 0.3s;
+  border-radius: 7px;
 
   @media (min-width: 1200px) and (max-width: 1400px) {
     height: 350px !important;
@@ -25,7 +25,11 @@
     p {
       margin: 10px 0px;
       padding: 0;
-      font-size: 14px;
+      font-size: 13px;
+
+      @media (max-width: 1032px) {
+        font-size: 13px;
+      }
 
     }
 
@@ -35,6 +39,12 @@
       margin-top: 10px;
       font-weight: 600;
       font-size: 13px;
+      text-transform: uppercase;
+
+      @media (max-width: 1032px) {
+        font-weight: 500;
+      }
+
       i {
         transition: .4s ease-in-out;
         margin-left: 3px;

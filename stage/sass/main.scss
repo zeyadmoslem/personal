@@ -17,3 +17,8 @@
 html, body{
     scroll-behavior: auto !important;
 } 
+
+html {
+    -webkit-backface-visibility: hidden;
+  }
+  

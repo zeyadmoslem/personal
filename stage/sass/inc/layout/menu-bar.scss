@@ -163,6 +163,82 @@
                     transition: .4s ease-in-out;
                 }
 
+                .next-section {
+                    width: 200px;
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(-90deg);
+                    color: $primaryColor;
+                    position: absolute;
+                    bottom: 125px;
+                    opacity: 1;
+                    font-weight: 500;
+                    left: -62px;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    opacity: 1;
+                    z-index: 999;
+                    letter-spacing: 1px;
+                    -webkit-transition: .4s ease-in-out;
+                    transition: .4s ease-in-out;
+                    @media (max-width: 1032px) {
+                        display: none;
+                    }
+
+                    span {
+                        display: inline-block;
+                        transform: translate3d(0px, 0%, 0px);
+                        transition: all 0.3s ease 0s;
+                    }
+
+                    a {
+                        display: block;
+                        letter-spacing: 0.2em;
+                        font-weight: 300;
+                        position: relative;
+
+                        strong {
+                            display: inline-block;
+                            font-size: 14px;
+                            font-weight: 700;
+                            margin-left: 4px;
+                            color: #b1acac;
+                        }
+
+                        i.fa-angle-left {
+                            position: absolute;
+                            bottom: 1px;
+                            left: -17px;
+                            font-size: 21px;
+                            display: inline-block;
+                            line-height: 1;
+                            color: #b1acac;
+                            -webkit-animation: secdownmoving 1000ms linear 0s infinite;
+                            -o-animation: secdownmoving 1000ms linear 0s infinite;
+                            animation: secdownmoving 1000ms linear 0s infinite;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 1px;
+                            right: 0;
+                            height: 1px;
+                            width: 0%;
+                            background-color: #ddd;
+                            -webkit-transition: all 0.3s ease 0s;
+                            -o-transition: all 0.3s ease 0s;
+                            transition: all 0.3s ease 0s;
+                        }
+
+                        &:hover {
+                            color: $primaryColor;
+                            &::after {
+                                width: 115%;
+                            }
+                        }
+                    }
+                }
+
                 .scroll-frame {
                     overflow: hidden;
                     -webkit-overflow-scrolling: touch;
@@ -285,6 +361,9 @@
                 .current-page {
                     opacity: 0;
                 }
+                .next-section {
+                    opacity: 0;
+                }
 
                 .main-menu {
                     pointer-events: auto;
@@ -297,5 +376,28 @@
             }
 
         }
+    }
+}
+
+@keyframes secdownmoving {
+    0% {
+        -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    50% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
     }
 }

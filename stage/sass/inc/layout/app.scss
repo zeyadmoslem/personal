@@ -7,6 +7,24 @@ body {
     letter-spacing: .25px;
     font-size: 13px;
 
+    &.lightbox-open {
+        .app {
+            &::before {
+                background: unset;
+            }
+
+            &::after {
+                background: unset;
+            }
+
+            .app-container {
+                &::before {
+                    background: unset;
+                }
+            }
+        }
+    }
+
     @media (max-width: 1032px) {
         overflow: visible;
     }
@@ -112,8 +130,33 @@ body {
 
 
 
+            .footer {
+                width: 100%;
+                padding: 17px 30px 7px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+                font-size: 13px;
+                color: #cacace;
+                -webkit-transition: .55s ease-in-out;
+                transition: .55s ease-in-out;
+                z-index: 9;
 
- 
+                @media (max-width: 1032px) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+
         }
     }
 

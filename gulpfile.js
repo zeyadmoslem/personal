@@ -33,12 +33,12 @@ gulp.task('js', function(cb) {
         .pipe(gulp.dest('dist/js'))
 
     // Singel Page Js
-    gulp.src(['stage/js/pages/*.js'])
+    gulp.src(['stage/js/runtime/*.js'])
         .pipe(minify())
         .pipe(rename({
             suffix: ".min"
         }))
-        .pipe(gulp.dest('dist/js/pages'))
+        .pipe(gulp.dest('dist/js/runtime'))
 
     cb();
 });
