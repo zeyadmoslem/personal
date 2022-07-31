@@ -219,4 +219,135 @@ $(document).ready(function () {
   });
 
 
+  /*
+* ----------------------------------------------------------------------------------------
+* 03. Singel Portfolio functions
+* ----------------------------------------------------------------------------------------
+*/
+
+  var swiper = new Swiper(".singel_portfolio_swiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    cssMode: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      "@0.75": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      "@1.00": {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      "@1.50": {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    }
+  });
+
+  // using d3 for convenience
+  var main = d3.select(".singel-portfolio");
+  var scrolly = main.select("#scrolly");
+  var figure = scrolly.select("figure");
+  var article = scrolly.select("article");
+  var fixed_step = main.select(".fixed-step");
+  var step1 = fixed_step.selectAll(".step1");
+  var step = article.selectAll(".step");
+
+  // initialize the scrollama
+  var scroller = scrollama();
+
+  // generic window resize listener event
+  function handleResize() {
+    // 1. update height of step elements
+    var stepH = Math.floor(window.innerHeight * 0.75);
+    step.style("height", stepH + "px");
+
+    var figureHeight = window.innerHeight / 1.7;
+    var figureMarginTop = (window.innerHeight - figureHeight) / 8;
+
+    figure
+      .style("height", figureHeight + "px")
+      .style("top", figureMarginTop + "px");
+
+    // 3. tell scrollama to update new element dimensions
+    scroller.resize();
+  }
+
+  // scrollama event handlers
+  function handleStepEnter(response) {
+    console.log(response);
+    // response = { element, direction, index }
+
+    // add color to current step only
+    step1.classed("is-active", function (d, i) {
+      return i === response.index;
+    });
+    step.classed("is-active", function (d, i) {
+      return i === response.index;
+    });
+
+
+    // update graphic based on step
+
+    // $('.figure-img').fadeOut(200, function() {
+    // })
+    // .fadeIn(200);
+    figure.select("img").attr('src', response.element.lastElementChild.innerText);
+
+  }
+
+  function setupStickyfill() {
+    d3.selectAll(".sticky").each(function () {
+      Stickyfill.add(this);
+    });
+  }
+
+  function init() {
+    setupStickyfill();
+
+    // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+    handleResize();
+
+    // 2. setup the scroller passing options
+    // 		this will also initialize trigger observations
+    // 3. bind scrollama event handlers (this can be chained like below)
+    scroller
+      .setup({
+        step: "#scrolly article .step",
+        offset: 0.80,
+        debug: false
+      })
+      .onStepEnter(handleStepEnter);
+  }
+
+  // kick things off
+  init();
+
+  $(".singel-portfolio #scrolly").niceScroll({
+    cursorcolor: "transparent",
+    autohidemode: 'scroll',
+    smoothscroll: true,
+    cursorborder: '1px solid transparent',
+  });
+
+
+
 });

@@ -25,7 +25,7 @@ include 'includes/menu-bar.php';
                 <div class="box-content">
                   <h5>Kassler Medical Center</h5>
                   <p>My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…</p>
-                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/contact.php">Read More <i class="fas fa-arrow-right"></i> </a>
+                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/singel-portfolio.php">Read More <i class="fas fa-arrow-right"></i> </a>
                 </div>
               </div>
               <div class="lightbox-content">
@@ -56,7 +56,7 @@ include 'includes/menu-bar.php';
                 <div class="box-content">
                   <h5>Kassler Medical Center</h5>
                   <p>My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…</p>
-                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/contact.php">Read More <i class="fas fa-arrow-right"></i> </a>
+                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/singel-portfolio.php">Read More <i class="fas fa-arrow-right"></i> </a>
                 </div>
               </div>
               <div class="lightbox-content">
@@ -87,7 +87,7 @@ include 'includes/menu-bar.php';
                 <div class="box-content">
                   <h5>Kassler Medical Center</h5>
                   <p>My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…</p>
-                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/contact.php">Read More <i class="fas fa-arrow-right"></i> </a>
+                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/singel-portfolio.php">Read More <i class="fas fa-arrow-right"></i> </a>
                 </div>
               </div>
               <div class="lightbox-content">
@@ -118,7 +118,7 @@ include 'includes/menu-bar.php';
                 <div class="box-content">
                   <h5>Kassler Medical Center</h5>
                   <p>My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…</p>
-                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/contact.php">Read More <i class="fas fa-arrow-right"></i> </a>
+                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/singel-portfolio.php">Read More <i class="fas fa-arrow-right"></i> </a>
                 </div>
               </div>
               <div class="lightbox-content">
@@ -149,7 +149,7 @@ include 'includes/menu-bar.php';
                 <div class="box-content">
                   <h5>Kassler Medical Center</h5>
                   <p>My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…</p>
-                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/contact.php">Read More <i class="fas fa-arrow-right"></i> </a>
+                  <a class="effect-underline" href="http://localhost/projects/zeyad_resume/singel-portfolio.php">Read More <i class="fas fa-arrow-right"></i> </a>
                 </div>
               </div>
               <div class="lightbox-content">

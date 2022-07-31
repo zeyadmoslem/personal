@@ -9,7 +9,7 @@
   align-items: center;
   box-shadow: -6px 6px 10px #0c0c10c2, -6px -6px 10px #14141aab;
   transition: 0.3s;
-  border-radius: 7px;
+  border-radius: 3px;
 
   @media (min-width: 1200px) and (max-width: 1400px) {
     height: 350px !important;
@@ -40,13 +40,14 @@
       font-weight: 600;
       font-size: 13px;
       text-transform: uppercase;
+      transition: .4s ease-in-out;
 
       @media (max-width: 1032px) {
         font-weight: 500;
       }
 
       i {
-        transition: .4s ease-in-out;
+        transition: .45s ease-in-out;
         margin-left: 3px;
       }
 

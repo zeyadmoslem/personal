@@ -1,0 +1,254 @@
+.singel-portfolio {
+    .header {
+        height: 300px;
+        padding: 0px;
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            overflow: unset;
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .swiper-bottom-bar {
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .pagination {
+                    .swiper-pagination {
+                        position: unset;
+                        text-align: unset;
+
+                        .swiper-pagination-bullet {
+                            background: #8c8c8e;
+                            opacity: unset;
+                            transition: all .3s ease-in-out;
+                            border-radius: 5px;
+                            height: 4px;
+
+                            &.swiper-pagination-bullet-active {
+                                background: $buttonBackground;
+                                width: 20px;
+                            }
+                        }
+
+                    }
+                }
+
+                .navigation {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        position: unset;
+                        margin-top: 0px;
+                        transition: all .3s ease-in-out;
+                        color: $buttonBackground;
+                        justify-content: end;
+
+
+                        &::after {
+                            font-size: 15px;
+                            font-weight: 700;
+                            font-family: "Font Awesome 5 Free";
+                            -webkit-font-smoothing: antialiased;
+                            display: inline-block;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-rendering: auto;
+                            line-height: 1;
+                        }
+
+                        &.swiper-button-disabled {
+                            opacity: unset;
+                            color: #8c8c8e !important;
+
+                        }
+                    }
+
+                    .swiper-button-next::after {
+                        content: '\f054';
+                    }
+
+                    .swiper-button-prev::after {
+                        content: '\f053';
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+
+    .content-wrapper {
+        .row {
+            width: 100%;
+        }
+
+        #scrolly {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 600px;
+            overflow: hidden;
+            overflow-y: scroll;
+
+            .fixed-step {
+                position: sticky;
+                margin: 0;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                z-index: 0;
+                height: 497.647px;
+                top: 43.5441px;
+
+                .step1 {
+                    padding: 5px 0 0 15px;
+                    transition: all .3s ease-in-out;
+                    border-left: 2px solid $buttonBackground;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        top: 40%;
+                        left: -10px;
+                        transform: translateY(-50%);
+                        background-color: #191923;
+                        border: 2px solid $buttonBackground;
+                        transition: all .3s ease-in-out;
+
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+
+                    &.is-active {
+                        &:after {
+                            content: "";
+                            background-color: $buttonBackground;
+                        }
+
+                        p {
+                            transition: all .3s ease-in-out;
+                            color: $buttonBackground;
+                        }
+                    }
+                }
+            }
+
+            article {
+                position: relative;
+
+                .step {
+                    margin: 0 auto 2rem auto;
+                    padding: 0px 7px;
+
+                    h2 {
+                        font-size: 20px;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0px !important;
+
+                        li {
+                            position: relative;
+                            left: 10px;
+                            font-weight: 400;
+                            font-size: 13px;
+                            margin: 10px 0px;
+
+                            &:before {
+                                content: '/';
+                                color: $buttonBackground;
+                                position: absolute;
+                                left: -10px;
+                            }
+                        }
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &:first-child {
+                        margin-top: -23px;
+
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+
+            figure {
+                position: -webkit-sticky;
+                position: sticky;
+                width: 100%;
+                margin: 0;
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                z-index: 0;
+
+                img {
+                    transition: all .3s ease-in-out;
+                    width: 100%;
+                    height: auto;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -moz-transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+
+
+        }
+
+
+    }
+}

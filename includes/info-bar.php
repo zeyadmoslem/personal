@@ -23,7 +23,7 @@
                     <h6>City:</h6><span>Franfurt a.M</span>
                   </li>
                   <li>
-                    <h6>Age:</h6><span>25</span>
+                    <h6>Age:</h6><span><?= date_diff(date_create('09-05-1996'), date_create(date('Y-m-d')))->format('%y') ?></span>
                   </li>
                 </ul>
               </div>

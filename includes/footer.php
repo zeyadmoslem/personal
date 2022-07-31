@@ -12,19 +12,20 @@
 
 <script src="dist/vendors/magnific/magick.js" data-no-reload charset="utf-8"></script>
 <script src="dist/vendors/swiper/swiper-bundle.min.js" data-no-reload></script>
-
+<script src="dist/vendors/scrollama/3d.min.js" charset="utf-8"></script>
+<script src="dist/vendors/scrollama/scrollama.min.js" charset="utf-8"></script>
 <script src="dist/js/app.min.js" data-no-reload charset="utf-8"></script>
 <script src="dist/js/runtime/runtime.min.js" charset="utf-8"></script>
-<script src="dist/js/vanilla-tilt.min.js" charset="utf-8"></script>
 
 <div id="main-script"></div>
 <script src="dist/vendors/highway/highway.js" data-no-reload charset="utf-8"></script>
-<script>
-    // VanillaTilt.init(document.querySelectorAll('.box'), {
-    //     max:10,
-    //     speed:400,
-    //     glare: false,
-    // });
+
+<script type="text/javascript">
+    
+
+    // nicescroll
+
+
 </script>
 
 </body>
